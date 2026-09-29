@@ -1,0 +1,2 @@
+import React from 'react';
+export default function Footer({navigate}){return <footer className="footer"><div><span className="brandMark">E</span><h3>EVENTORA</h3><p>Events, produced with intent.</p></div><div className="footer-links"><button onClick={()=>navigate('events')}>Events</button><button onClick={()=>navigate('catering')}>Catering</button><button onClick={()=>navigate('team')}>Our team</button><button onClick={()=>navigate('plan')}>Plan an event</button></div><small>© 2026 EVENTORA. Event planning platform.</small></footer>}

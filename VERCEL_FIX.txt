@@ -1,0 +1,35 @@
+EVENTORA VERCEL FIX
+
+The previous deployment failed because package.json ran:
+  npm --prefix server install
+
+Vercel could not find server/package.json in the deployment checkout.
+This version removes that Vercel-hostile postinstall step.
+
+Deploy:
+1. Upload/push the CONTENTS of this folder to the root of your GitHub repository.
+2. In Vercel import that repository.
+3. Root Directory: ./
+4. Build Command: npm run build
+5. Output Directory: build
+6. Framework: Create React App
+7. Add environment variables:
+   EVENTORA_OFFICE_EMAIL=vishnuharini07@gmail.com
+   EVENTORA_OFFICE_PHONE=9940058091
+   RESEND_API_KEY=your_resend_key
+   EVENTORA_FROM_EMAIL=your_verified_resend_sender
+   GOOGLE_PLACES_API_KEY=your_google_places_key (optional)
+8. Deploy.
+
+After deployment test:
+https://YOUR-DOMAIN.vercel.app/api/health
+
+It should return JSON containing:
+  ok: true
+  service: EVENTORA API
+
+For local development:
+  npm install
+  npm start
+
+Do not add a postinstall script that runs npm --prefix server install on Vercel.

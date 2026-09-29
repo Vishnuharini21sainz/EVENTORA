@@ -1,0 +1,28 @@
+EVENTORA — VERCEL DEPLOYMENT
+
+1. Extract this ZIP. The extracted folder itself is the project root.
+2. Confirm package.json is directly inside the root folder.
+3. Push ALL files inside this root to your GitHub repository. Do not push the ZIP file.
+4. In Vercel: Add New -> Project -> Import the GitHub repository.
+5. If Vercel asks for Root Directory, leave it as ./ because package.json is at the repository root.
+6. Build Command: npm run build
+7. Output Directory: build
+8. Install Command: npm install
+9. Framework Preset: Create React App
+10. Add these Environment Variables in Vercel:
+   EVENTORA_OFFICE_EMAIL = vishnuharini07@gmail.com
+   EVENTORA_OFFICE_PHONE = 9940058091
+   RESEND_API_KEY = your_resend_api_key
+   EVENTORA_FROM_EMAIL = your_verified_sender
+   GOOGLE_PLACES_API_KEY = your_google_places_key (optional)
+11. Deploy.
+
+IMPORTANT:
+- Do NOT deploy the ZIP file itself. Extract it first.
+- Do NOT set Root Directory to src.
+- src/index.js has been corrected to use import, not mport.
+- GitHub Pages is not suitable for the full-stack version because it cannot run the Express API/email backend. Use Vercel for the full-stack deployment.
+
+After deployment, open:
+https://YOUR-VERCEL-DOMAIN/api/health
+It should return JSON containing EVENTORA API status.

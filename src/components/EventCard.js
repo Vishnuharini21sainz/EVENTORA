@@ -1,0 +1,2 @@
+import React from 'react';
+export default function EventCard({event,onClick}){return <button className="event-card" style={{'--event-accent':event.accent}} onClick={onClick}><div className="event-card-image" style={{backgroundImage:`url('${event.hero}')`}}/><div className="event-card-overlay"><span className="tag">{event.name}</span><h3>{event.short}</h3><span className="arrow">Explore ↗</span></div></button>}

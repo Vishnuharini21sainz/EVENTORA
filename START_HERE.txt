@@ -1,0 +1,26 @@
+EVENTORA - START HERE
+
+1. Open THIS folder (the one containing package.json) in VS Code.
+2. Open Command Prompt terminal.
+3. Run:
+
+   npm install
+   npm start
+
+That is all.
+
+The website starts on http://localhost:3000
+The API starts automatically on http://localhost:5000
+
+DO NOT run npm from src.
+DO NOT run npm from server/src.
+You only need the EVENTORA root folder.
+
+If the website shows an API error, check that the terminal shows:
+EVENTORA API running on http://localhost:5000
+
+
+EMAIL SETUP
+The enquiry destination is vishnuharini07@gmail.com.
+WhatsApp number: +91 99400 58091.
+For real email delivery, copy server/.env.example to server/.env and add your Resend API key, then restart npm start.
